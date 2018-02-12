@@ -10,8 +10,56 @@
 			// var element = document.getElementById("outerDiv");
 			// alert(element.innerHTML);
 
-			var paragraphs = document.getElementsByTagName("p");
-			alert(paragraphs.length);
+			// var paragraphs = document.getElementsByTagName("p");
+			// alert(paragraphs.length);
+
+			// var paragraphs = document.getElementsByClassName("subPara");
+			// alert("<p> elements with class name subPara: " + paragraphs.length);
+
+			// var paragraphs = document.querySelectorAll("p");
+			// alert(paragraphs.length);
+
+			// var paragraphs = document.querySelector("#outerDiv");
+			// alert(paragraphs.length);
+
+			// var element = document.getElementById("innerDiv");
+			// alert(element.innerHTML);
+			// document.removeChild(element);
+			// var afterRemove = document.getElementById("innerDiv");
+			// alert(afterRemove);
+
+			// var outerDiv = document.getElementById("outerDiv");
+			// var element = document.createElement("article");
+			// element.innerText = "My new <article> element.";
+			// outerDiv.appendChild(element);
+
+			// Achieves same result as code above
+			// var element = document.getElementById("outerDiv").appendChild(document.createElement("article"));
+			// element.innerText = "My new <article> element (a slightly different way).";
+
+			// Inserted article
+			// var element = document.getElementById("outerDiv").insertBefore(
+			// 		document.createElement("article"),
+			// 		document.getElementById("innerDiv"));
+			// element.innerText = "My new inserted <article> element.";
+
+			// Insert as first element
+			// var inner = document.getElementById("innerDiv");
+			// var element = inner.insertBefore(document.createElement("article"),inner.firstChild);
+			// element.innerText = "My new firstChild inserted <article> element.";
+
+			// Insert as last element
+			// var inner = document.getElementById("innerDiv");
+			// var element = inner.insertBefore(document.createElement("article"),inner.lastChild);
+			// element.innerText = "My new lastChild inserted <article> element.";
+
+			// Removing a child element ( remove P2)
+			// var innerDiv = document.getElementById("innerDiv");
+			// var p = innerDiv.removeChild(document.getElementById("P2"));
+
+			// Remove Node *** Does Not work in Chrome or Safari
+			var innerDiv = document.getElementById("innerDiv");
+			innerDiv.removeNode(true);
 		};
 	</script>
 
@@ -26,7 +74,7 @@
 			<li>Third List Item</li>
 			<li>Fourth List Item</li>
 		</ul>
-		<div id="innerDiv">
+		<div id="innerDiv" class="subPara">
 			<p class="subPara" id="P1">Paragraph 1</p>
 			<p class="subPara" id="P2">Paragraph 2</p>
 			<p class="subPara" id="P3">Paragraph 3</p>
