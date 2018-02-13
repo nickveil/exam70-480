@@ -4,9 +4,17 @@
 <html>
 <head>
 	<title>UI Controls</title>
-
+	<style>
+		img:hover{
+			cursor: pointer;
+		}
+	</style>
 	<script>
+		var video;
 		window.onload = function (){
+
+			video = document.getElementById("sampleVideo");
+
 			// var element = document.getElementById("outerDiv");
 			// alert(element.innerHTML);
 
@@ -58,15 +66,41 @@
 			// var p = innerDiv.removeChild(document.getElementById("P2"));
 
 			// Remove Node *** Does Not work in Chrome or Safari
-			var innerDiv = document.getElementById("innerDiv");
-			innerDiv.removeNode(true);
+			// var innerDiv = document.getElementById("innerDiv");
+			// innerDiv.removeNode(true);
+
+			// var innerDiv = document.getElementById("innerDiv");
+			// var newDiv = document.createElement("div");
+			// for (var i = 0; i<innerDiv.childNodes.length; i++){
+			// 	var anchor = newDiv.appendChild(document.createElement("a"));
+			// 	anchor.setAttribute("href", "https://wwww.google.com");
+			// 	anchor.text = innerDiv.childNodes[i].textContent;
+			// 	newDiv.appendChild(document.createElement("br"));
+			// }
+			// innerDiv.replaceWith(newDiv);
 		};
+		function play(){
+			video.play();
+		}
+		function pause(){
+			video.pause();
+		}
+		function back(){
+			video.currentTime-=10;
+		}
 	</script>
 
 </head>
 <body>
 
 	<div id="outerDiv">
+		<div id="leadVideo">
+			<video controls src="../lib/floor_routine.mp4" height="400" width="600" id="sampleVideo" poster="../lib/navy_pier.jpg">
+				<object>
+					<p>Video is not supported by this browser.</p>
+				</object>
+			</video>
+		</div>
 		<p class="mainPara">Main Paragraph</p>
 		<ul>
 			<li>First List Item</li>
@@ -99,6 +133,7 @@
 		</table>
 		<input type="text" /><input type="submit" value="Submit" />
 	</div>
+
 
 </body>
 </html>
