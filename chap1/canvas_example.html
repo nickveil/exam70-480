@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas and SVG</title>
+	<style>
+		canvas {
+			border: 1px solid black;
+		}
+	</style>
+	<script>
+		// window.onload = function (){
+		// 	var drawingSurface = document.getElementById("drawingSurface");
+		// 	var ctxt = drawingSurface.getContext("2d");
+		// 	ctxt.beginPath();
+		// 	ctxt.moveTo(20,20);
+		// 	ctxt.lineTo(225,350);
+		// 	ctxt.lineWidth = 5;
+		// 	ctxt.strokeStyle = '#f93';
+		// 	ctxt.lineTo(300,30);
+		// 	ctxt.lineTo(66,379);
+		// 	ctxt.lineCap = "round";
+		// 	ctxt.stroke();
+		// }
+
+		window.onload = function(){
+			var drawingSurface = document.getElementById("drawingSurface");
+			var ctxt = drawingSurface.getContext('2d');
+			ctxt.beginPath();
+			ctxt.arc(150,100,75,1.5*Math.PI,1.4899 * Math.PI,false);
+			ctxt.lineWidth = 25;
+			ctxt.strokeStyle = '#0f0';
+			ctxt.stroke();
+
+			ctxt.beginPath();
+			ctxt.arc(450,100,75,1.5*Math.PI,2*Math.PI,true);
+			ctxt.lineWidth = 25;
+			ctxt.strokeStyle = "blue";
+			ctxt.stroke();
+
+			ctxt.beginPath();
+			ctxt.arc(150,300,75,1*Math.PI,1.5*Math.PI,false);
+			ctxt.lineWidth = 25;
+			ctxt.strokeStyle = '#0ff';
+			ctxt.stroke();
+
+			ctxt.beginPath();
+			ctxt.arc(450,300,75,.7*Math.PI,1.67*Math.PI,true);
+			ctxt.lineWidth = 25;
+			ctxt.strokeStyle = '#f00';
+			ctxt.stroke();
+
+			ctxt.beginPath();
+			ctxt.moveTo(20,380);
+			ctxt.quadraticCurveTo(300,-250,580,380);
+			ctxt.lineWidth = 15;
+			ctxt.strokeStyle = '#00f';
+			ctxt.stroke();
+
+			ctxt.beginPath();
+			ctxt.moveTo(20,360);
+			ctxt.quadraticCurveTo(300,-260,580,360);
+			ctxt.lineWidth = 15;
+			ctxt.strokeStyle = '#0ff';
+			ctxt.stroke();
+
+			ctxt.beginPath();
+			ctxt.moveTo(125,20);
+			ctxt.bezierCurveTo(0,200,300,300,50,400);
+			ctxt.lineWidth = 5;
+			ctxt.strokeStyle = '#f00';
+			ctxt.stroke();
+
+			ctxt.beginPath();
+			ctxt.arc(300,200,75,1.75 * Math.PI,1.25 * Math.PI,false);
+			ctxt.lineTo(150,125);
+			ctxt.quadraticCurveTo(300,0,450,125);
+			ctxt.lineTo(353,144);
+			ctxt.strokeStyle = "blue";
+			var gradient = ctxt.createRadialGradient(200,200,20,250,250,100);
+			gradient.addColorStop(0,"blue");
+			gradient.addColorStop(0.5, "green");
+			gradient.addColorStop(1, "yellow");
+			ctxt.fillStyle = gradient;
+			ctxt.fill();
+			// ctxt.lineCap = "round";
+			// ctxt.lineWidth = 10;
+			ctxt.stroke();
+
+			ctxt.beginPath();
+			ctxt.rect(350,275,150,75);
+			var gradient = ctxt.createLinearGradient(375,275,475,275,575,300);
+			gradient.addColorStop(0,"blue");
+			gradient.addColorStop(0.5, "yellow");
+			gradient.addColorStop(1, "green");
+			ctxt.fillStyle = gradient;
+			ctxt.fill();
+			ctxt.lineWidth = 1;
+			ctxt.strokeStyle = "black";
+			ctxt.stroke();
+
+			ctxt.strokeText("1. Text with default font",100,100);
+			ctxt.font ="24px arial";
+			ctxt.strokeText("2. Text with altered font",100,125);
+			ctxt.font	= "24px arial";
+			ctxt.strokeStyle = "red";
+			ctxt.strokeText("3. Text with altered colored font",100,160);
+			ctxt.font	= "24px arial";
+			ctxt.fillStyle = "red";
+			ctxt.fillText("4. Text with altered colored font",100,175);
+			ctxt.font ="24px arial";
+			ctxt.textAlign = "center";
+			ctxt.fillStyle = "red";
+			ctxt.fillText("5. Test with altered colored font Centered.",drawingSurface.width/2, drawingSurface.height/2);
+
+
+
+		}
+
+	</script>
+</head>
+<body>
+
+	<canvas id="drawingSurface" width="600" height="400">Your browser does not support HTML5.</canvas>
+
+</body>
+</html>
