@@ -12,6 +12,11 @@
     </style>
     <script>
         window.onload = function(){
+            var customer = new Object();
+            customer.firstName = "Nick";
+            customer.lastName = "Veil";
+            customer.shirtSize = "XXL";
+            localStorage.setItem("cart1",JSON.stringify(customer));
             LoadFromStorage();
             document.getElementById("btnAdd").onclick = function(){
                 localStorage.setItem(document.getElementById("toStorageKey").value,
@@ -51,7 +56,7 @@
                     tbl.appendChild(row);
                 }
                 if (document.getElementById("storageTable")){
-                    document.getElementById("storageTable").replaceWith (tbl);
+                    document.getElementById("storageTable").replaceWith(tbl);
                 }
                 else {
                     storageDiv.appendChild(tbl);
