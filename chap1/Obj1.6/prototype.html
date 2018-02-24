@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        window.onload =function(){
+            document.getElementById("resultsDiv").innerText = function(){
+                Array.prototype.sum = function (){
+                    var res = 0;
+                    for(var i=0; i<this.length; i++){
+                        res+= this[i];
+                        return res;
+                    };
+                };
+                var x = newArray(2)
+                x[0] = 5;
+                x[1] = 6;
+                document.write(x.sum());
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="resultsDiv">
+
+    </div>
+</body>
+</html>

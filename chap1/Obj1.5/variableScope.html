@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 100;
+        height: 100px;
+        border: 1px solid black;
+    }
+</style>
+<script>
+    var globalVar = "global";
+    window.onload = function(){
+        var localVar = "local";
+        var scaleX = 0.0;
+        document.getElementById("Div1").onclick = function(){
+            var insideDivClick = "insideDiv1";
+            alert(globalVar);
+            alert(localVar);
+            alert(insideDivClick);  
+        };
+        document.getElementById("Div2").onclick = function(){
+            alert(globalVar);
+            alert(localVar);
+            alert(insideDivClick);
+        };
+        document.getElementById("Div3").onclick = function(){
+            var insideDiv3 = "Div3";
+            AFunction();
+            BFunctionWithParam(insideDiv3);
+        };
+        document.getElementById("Div4").onclick = function(){
+            var scaleX = -3;
+            alert(scaleX);
+        }
+        function scaleDiv(){
+
+        }
+        function AFunction(){
+            var x;
+            alert("insideDiv3");
+        };
+        function BFunctionWithParam(p){
+            alert(p);
+            alert(localVar);
+        };
+
+    }
+</script>
+<body>
+    <div id="Div1"></div>
+    <div id="Div2"></div>
+    <div id="Div3"></div>
+    <div id="Div4"></div>
+</body>
+</html>
