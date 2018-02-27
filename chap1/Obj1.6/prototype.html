@@ -9,17 +9,16 @@
     <script>
         window.onload =function(){
             document.getElementById("resultsDiv").innerText = function(){
-                Array.prototype.sum = function (){
-                    var res = 0;
-                    for(var i=0; i<this.length; i++){
-                        res+= this[i];
-                        return res;
-                    };
-                };
-                var x = newArray(2)
-                x[0] = 5;
-                x[1] = 6;
-                document.write(x.sum());
+                var book = {
+                    ISBN: "5555555",
+                    Length: 560,
+                    genre:"programming",
+                    covering:"soft",
+                    author:"John Doe",
+                    currentPage:5
+                }
+                console.log(book);
+
             }
         }
     </script>
