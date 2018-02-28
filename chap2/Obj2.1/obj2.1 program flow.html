@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var x = 10;
+            // switch(x){
+            //     case 0:
+            //         alert("low");
+            //         break;
+            //     case 8:
+            //     case 10:
+            //         alert("close enough");
+            //         break;
+            //     case 12:
+            //         alert("too high");
+            //         break;
+            //     default:
+            //         alert("i don't know what you did.");
+            //         break;
+
+            // }
+            // x == 8 ? alert("yes"):alert("no");
+
+            var anArray = new Array(5);
+            // alert(anArray.length);
+            anArray[9] ="hello";
+            // alert(anArray.length);
+
+
+            var multiArray = new Array(3);
+            multiArray[0] = new Array(3);
+            multiArray[1] = new Array(3);
+            multiArray[2] = new Array(3);
+
+            multiArray[1][2] = "golfing";
+
+            var sports = new Array ('football','cricket','rugby','tennis','golf','badminton');
+            var moreSports = new Array ('soccer','basketball','hockey');
+            var combinedSports = sports.concat(moreSports);
+
+            var index = sports.indexOf('cricket',0);
+            alert(combinedSports);
+            // alert(combinedSports.sort()); 
+            // alert(combinedSports.slice(2,4));
+            // alert(combinedSports.splice(2,3,'non-sport1','non-sport2','non-sport3'));
+            // alert(combinedSports.push("additional-sport1", "additional-sport2"));
+            // alert(combinedSports.pop());
+            combinedSports.unshift("baseball","bowling","curling");
+            combinedSports.shift();
+
+
+
+            alert(combinedSports);
+                
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
