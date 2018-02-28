@@ -1,0 +1,27 @@
+{
+  "name": "exam-70-480",
+  "version": "1.0.0",
+  "description": "sockets example",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickveil/exam70-480.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickveil/exam70-480/issues"
+  },
+  "homepage": "https://github.com/nickveil/exam70-480#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
+}
