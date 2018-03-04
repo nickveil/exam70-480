@@ -23,7 +23,7 @@
                 wsConnection.close();
             }
             connectButton.onclick = function(){
-                wsConnection = new WebSocket('ws://localhost:3000', ['soap','xmpp']);
+                wsConnection = new WebSocket('http://localhost:3000', ['soap','xmpp']);
             }
             sendButton.onclick = function() {
                 if(wsConnection.readyState == WebSocket.OPEN){

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+      window.onload = function(){
+        //   var evenNumbers = new Array (0,2,4,6,8,9,10,12);
+        //   var allEven = evenNumbers.every(evenNumberCheck, evenNumbers);
+        //   if (allEven){
+        //       alert ("All numbers in the array are correct!");
+        //   } else {
+        //       alert ("Whoops! You have an odd number in your array.");
+        //   }
+        
+        //   function evenNumberCheck (value, index, array){
+        //       return (value % 2) == 0;
+        //   }
+
+        // var evenNumbers = new Array (9,11,13);
+        //   var allEven = evenNumbers.some(evenNumberCheck, evenNumbers);
+        //   if (allEven){
+        //       alert ("One or more numbers in the array are correct!");
+        //   } else {
+        //       alert ("Whoops! You have all odd numbers in your array.");
+        //   }
+        
+        //   function evenNumberCheck (value, index, array){
+        //       return (value % 2) == 0;
+        //   }
+
+        // var sportsArray = ['Hockey','Golf','Basketball','Football','Baseball'];
+        // sportsArray.sort().forEach(offerSport);
+
+        // function offerSport(value, index, array){
+        //     // console.log(value);
+        //     // console.log(index);
+        //     // console.log(array);
+        //     var sportsList = document.getElementById("sportsList");
+        //     var bullet = document.createElement("li");
+        //     bullet.innerText = value;
+        //     sportsList.appendChild(bullet);
+        // }
+
+        // var evenNumbers = new Array (0,2,4,6,8,9,10,12,14);
+        // var allEven = evenNumbers.filter(evenNumberCheck,evenNumbers);
+        // alert (allEven);
+
+        // function evenNumberCheck (value, index, array){
+        //     console.log("Checking if "+ value + " is even.");
+        //     if ((value % 2) == 0 ){
+        //         console.log ("Yep, it's even.");
+        //     }else {
+        //         console.log ("Nope!!! Throw this one out.")
+        //     }
+        //     return (value % 2) == 0;
+
+        // }
+
+        // var money = [12.8, 15.9, 21.7, 35.3];
+        // var roundedMoney = money.map(roundOff, money);
+        // console.log(money);
+        // console.log(roundedMoney);
+
+        // function roundOff (value,position,array){
+        //     return Math.round(value);
+        // }
+
+        // var numbers = [3,5,7,12];
+        // var sqrdNumbers = numbers.map(squaredValue,numbers);
+        // console.log(numbers);
+        // console.log(sqrdNumbers);
+
+        // function squaredValue (value, index, array){
+        //     return value * value;
+        // }
+
+        var numbers = [1,2,3,4,5,6,7,8,9,10];
+        var factorial = numbers.reduce(factorial);
+        console.log (factorial); 
+        function factorial (previous, current){
+            console.log ("previous: " + previous);
+            console.log ("current: " + current);
+            return previous * current;
+        }
+      }  
+    </script>
+</head>
+<body>
+    <ul id="sportsList"></ul>
+</body>
+</html>
