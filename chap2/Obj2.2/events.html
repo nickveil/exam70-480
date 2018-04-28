@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        // window.onload = loadEventHandler();
+
+        //     function loadEventHandler(){
+        //         alert("Hello event.");
+        //     }
+        
+
+        // var div1Count = null;
+        // var div2Count = null;
+        // var div3Count = null;
+        // function onloadEventHandler(){
+        //     alert ("Hello Event!");
+        // }
+        // function bgdColorChange (id){
+        //     var ele = document.getElementById(id);
+
+        //     ele.style.backgroundColor = "red";
+
+        //     switch (id) {
+        //         case "div1":
+        //         div1Count = div1Count + 1;
+        //         console.log("div1 Total: ",div1Count);
+        //         return;
+
+        //         case "div2":
+        //         div2Count = div2Count + 1;
+        //         console.log("div2 Total: ",div2Count);
+        //         return;
+
+        //         case "div3":
+        //         div3Count = div3Count + 1;
+        //         console.log("div3 Total: ",div3Count);
+        //         return;
+        //     }
+            
+        // }
+
+        window.addEventListener("load",onloadHandler,false);  
+        window.addEventListener("load",onloadHandler2,false);  
+        window.addEventListener("load",onloadHandler3,false);
+        window.removeEventListener("load",onloadHandler2,false);
+        
+        function onloadHandler() {
+            alert("hello event 1.");
+        }
+        function onloadHandler2() {
+            alert("hello event 2.");
+        }
+        function onloadHandler3() {
+            alert("hello event 3.");
+        }
+    </script>
+    <style>
+        /* div {
+            background-color: aqua;
+            height: 45px;
+            width: 45px;
+            border: 1px solid black;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <div id="div1" onmouseout="bgdColorChange(id)">Div 1</div>
+    <div id="div2" onmouseout ="bgdColorChange(id)">Div 2</div>
+    <div id="div3" onmouseout="bgdColorChange(id)">Div 3</div>
+     -->
+</body>
+</html>
