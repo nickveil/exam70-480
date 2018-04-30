@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Bubble Events</title>
     <style>
         #outer {
             width: 200px;
@@ -13,7 +13,7 @@
         }
         #middle {
             width: 50%;
-            height:50;
+            height:50%;
             position: relative;
             top:25%;
             left:25%;
@@ -30,9 +30,9 @@
     </style>
     <script>
         window.onload = function() {
-            document.getElementById("outer").addEventListener("click", outerDivCLick, false);
-            document.getElementById("middle").addEventListener("click", middleDivClick, false);
-            document.getElementById("inner").addEventListener("click", innerDivClick, false);
+            document.getElementById("outer").addEventListener("click", outerDivClick, true);
+            document.getElementById("middle").addEventListener("click", middleDivClick, true);
+            document.getElementById("inner").addEventListener("click", innerDivClick, true);
             document.getElementById("clearButton").addEventListener("click", clearList, false);
         }
         function outerDivClick(){
